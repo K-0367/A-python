@@ -1,0 +1,10 @@
+#traffic light stimulation 
+Traffic_light = input("What color is the traffic light? (red, yellow, green): ")
+if Traffic_light == "red":
+    print("Stop")
+elif Traffic_light == "yellow":
+    print("Caution")
+elif Traffic_light == "green":
+    print("Go")
+else:
+    print("Invalid traffic light color")
