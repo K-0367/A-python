@@ -1,0 +1,8 @@
+s = input("Enter a sentence: ")
+
+words = s.split()
+unique = set(words)
+
+print("After removing duplicates:")
+for w in unique:
+    print(w, end=" ")
