@@ -1,0 +1,14 @@
+a = set(map(int, input("Enter set A: ").split()))
+b = set(map(int, input("Enter set B: ").split()))
+
+flag = True
+
+for i in a:
+    if i not in b:
+        flag = False
+        break
+
+if flag:
+    print("A is subset of B")
+else:
+    print("A is not subset of B")
