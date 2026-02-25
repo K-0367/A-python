@@ -1,0 +1,14 @@
+a = set(map(int, input("Enter set A: ").split()))
+b = set(map(int, input("Enter set B: ").split()))
+
+result = set()
+
+for i in a:
+    if i not in b:
+        result.add(i)
+
+for j in b:
+    if j not in a:
+        result.add(j)
+
+print("Symmetric Difference:", result)
