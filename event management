@@ -1,0 +1,65 @@
+events = {}
+
+while True:
+    print("\n====== EVENT MANAGEMENT SYSTEM ======")
+    print("1. Add Event")
+    print("2. View All Events")
+    print("3. Update Event")
+    print("4. Delete Event")
+    print("5. Exit")
+
+    ch = int(input("Enter your choice: "))
+
+    if ch == 1:
+        eid = input("Enter Event ID: ")
+        name = input("Enter Event Name: ")
+        date = input("Enter Event Date: ")
+        venue = input("Enter Event Venue: ")
+
+        events[eid] = {
+            "Name": name,
+            "Date": date,
+            "Venue": venue
+        }
+
+        print("Event Added Successfully!")
+
+    elif ch == 2:
+        if len(events) == 0:
+            print("No Events Available")
+        else:
+            for i in events:
+                print("\nEvent ID:", i)
+                print("Name:", events[i]["Name"])
+                print("Date:", events[i]["Date"])
+                print("Venue:", events[i]["Venue"])
+
+    elif ch == 3:
+        uid = input("Enter Event ID to Update: ")
+        if uid in events:
+            name = input("Enter New Event Name: ")
+            date = input("Enter New Event Date: ")
+            venue = input("Enter New Venue: ")
+
+            events[uid]["Name"] = name
+            events[uid]["Date"] = date
+            events[uid]["Venue"] = venue
+
+            print("Event Updated Successfully!")
+        else:
+            print("Event ID Not Found")
+
+    elif ch == 4:
+        did = input("Enter Event ID to Delete: ")
+        if did in events:
+            del events[did]
+            print("Event Deleted Successfully!")
+        else:
+            print("Event ID Not Found")
+
+    elif ch == 5:
+        print("Thank You!")
+        break
+
+    else:
+        print("Invalid Choice")
