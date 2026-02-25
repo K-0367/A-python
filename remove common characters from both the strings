@@ -1,0 +1,17 @@
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+
+common = set(s1) & set(s2)
+
+r1 = ""
+for i in s1:
+    if i not in common:
+        r1 += i
+
+r2 = ""
+for j in s2:
+    if j not in common:
+        r2 += j
+
+print("After removing common characters:")
+print(r1, r2)
