@@ -1,0 +1,4 @@
+l1 = list(map(int, input("Enter list1: ").split()))
+l2 = list(map(int, input("Enter list2: ").split()))
+
+print("Elements in list1 but not in list2:", set(l1) - set(l2))
