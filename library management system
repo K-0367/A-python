@@ -1,0 +1,44 @@
+#library management system
+library = {
+    "Python": 3,
+    "Java": 2,
+    "C++": 1,
+    "Data Structures": 2
+}
+
+while True:
+    print("\nLibrary Management System")
+    print("1. Show Books")
+    print("2. Issue Book")
+    print("3. Return Book")
+    print("4. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        print("\nAvailable Books:")
+        for book in library:
+            print(book, "- Copies:", library[book])
+
+    elif choice == 2:
+        book = input("Enter book name to issue: ")
+        if book in library and library[book] > 0:
+            library[book] -= 1
+            print("Book issued successfully.")
+        else:
+            print("Book not available.")
+
+    elif choice == 3:
+        book = input("Enter book name to return: ")
+        if book in library:
+            library[book] += 1
+        else:
+            library[book] = 1
+        print("Book returned successfully.")
+
+    elif choice == 4:
+        print("Exiting system...")
+        break
+
+    else:
+        print("Invalid choice")
