@@ -8,7 +8,7 @@ CREATE TABLE giet (
     salary INT,
     gender CHAR(1)
 );
-INSERT INTO student VALUES
+INSERT INTO giet VALUES
 (101, 'aman', 'delhi', 'doctor', 25000, 'M'),
 (102, 'naman', 'gunupur', 'teacher', 15000, 'M'),
 (103, 'raman', 'rayagada', 'plumber', 15000, 'M'),
